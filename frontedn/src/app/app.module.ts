@@ -11,7 +11,7 @@ import { CategorialistComponent } from './components/categorialist/categorialist
 import { CategoriadetailsComponent } from './components/categoriadetails/categoriadetails.component';
 import { MenuComponent } from './components/layouts/menu/menu.component';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,8 @@ import { ActivatedRoute } from '@angular/router';
     LoginComponent,
     FormsModule,
     ProdutodetailComponent,
+    HttpClientModule
+    
     
    
   ],
