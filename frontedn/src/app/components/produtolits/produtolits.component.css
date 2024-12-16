@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.produtos-container {
+  margin-bottom: 20px;
+}
+
+.produtos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.produtos-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.produtos-list li span {
+  flex: 1;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.new-product-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  float: right; /* Alinha o botão à direita */
+}
+
+.new-product-btn:hover {
+  background-color: #218838;
+}
+
+.remove-btn {
+  background-color: #dc3545; /* Cor vermelha para o botão excluir */
+}
+
+.remove-btn:hover {
+  background-color: #c82333; /* Tom mais escuro para o hover */
+}

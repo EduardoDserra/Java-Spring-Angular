@@ -13,22 +13,22 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
-    // Método para listar todas as categorias
+    
     public List<Categoria> buscarCategorias() {
         return categoriaRepository.findAll();
     }
 
-    // Método para buscar uma categoria por ID
+    
     public Categoria buscarPorId(Long id) {
         return categoriaRepository.findById(id).orElse(null);
     }
 
-    // Método para salvar ou atualizar uma categoria
+    
     public Categoria salvarCategoria(Categoria categoria) {
         return categoriaRepository.save(categoria);
     }
 
-    // Método para deletar uma categoria por ID
+    
     public void deletarCategoria(Long id) {
         if (categoriaRepository.existsById(id)) {
             categoriaRepository.deleteById(id);

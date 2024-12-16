@@ -11,9 +11,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Categorias")
+@Getter
+@Setter
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +29,7 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Produto> produtos;
 
-    // Construtores
+    
     public Categoria() {
     };
 
@@ -33,28 +37,4 @@ public class Categoria {
         this.nome = nome;
     };
 
-    // Getters e Setters
-    public Long getId() {
-        return id;
-    };
-
-    public void setId(Long id) {
-        this.id = id;
-    };
-
-    public String getNome() {
-        return nome;
-    };
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    };
-
-    public List<Produto> getProdutos() {
-        return produtos;
-    };
-
-    public void setProdutos(List<Produto> produtos) {
-        this.produtos = produtos;
-    };
 }

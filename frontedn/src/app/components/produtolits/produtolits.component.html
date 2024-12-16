@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+  <link rel="stylesheet" href="produtolits.component.css">
+</head>
+<body>
+  <div class="produtos-container">
+    <button class="new-product-btn" routerLink="/admin/produtos/new">Novo Produto</button>
+    <h2>Lista de Produtos</h2>
+    <ul class="produtos-list">
+      @for (produto of lista; track $index) {
+        <li>
+            <span>{{produto.id}}</span>
+            <span>{{produto.nome}}</span>
+            <div class="button-container">
+              <button class="btn update-btn" routerLink="/admin/produtos/edit/{{produto.id}}">Editar</button>
+              <button class="btn remove-btn" (click)="deletById(produto)">Excluir</button>
+            </div>
+          </li>
+
+      }
+        
+     
+    </ul>
+  </div>
+</body>
+</html>

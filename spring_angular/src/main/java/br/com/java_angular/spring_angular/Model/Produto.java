@@ -9,9 +9,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Produtos")
+@Getter
+@Setter
 public class Produto {
     
     @Id
@@ -19,55 +23,20 @@ public class Produto {
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
-
-    @Column(nullable = false)
-    private Double preco;
+    private String nomeProduto;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
-    // Construtores
+   
     public Produto() {
     };
 
-    public Produto(String nome, Double preco, Categoria categoria) {
-        this.nome = nome;
-        this.preco = preco;
+    public Produto(String nomeProduto, Categoria categoria) {
+        this.nomeProduto = nomeProduto;
         this.categoria = categoria;
     };
 
-    // Getters e Setters
-    public Long getId() {
-        return id;
-    };
-
-    public void setId(Long id) {
-      ;  this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    };
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    };
-
-    public Double getPreco() {
-        return preco;
-    };
-
-    public void setPreco(Double preco) {
-        this.preco = preco;
-    };
-
-    public Categoria getCategoria() {
-        return categoria;
-    };
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    };
+   
 }

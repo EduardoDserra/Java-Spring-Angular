@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salvar Produto</title>
+  <link rel="stylesheet" href="produtodetail.component.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Salvar Produto</h2>
+    <form class="form">
+      <div class="form-group">
+        <label for="produtoNome">Nome do Produto</label>
+        <input type="text" id="produtoNome" placeholder="Digite o nome do produto" [(ngModel)]="produto.nome"/>
+      </div>
+      <button type="button" class="btn" (click)="salvar()">Salvar</button>
+    </form>
+  </div>
+</body>
+</html>

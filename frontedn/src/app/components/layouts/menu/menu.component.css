@@ -1,0 +1,48 @@
+/* Estilos gerais da navbar */
+.navbar {
+  background-color: blue;  /* Cor de fundo azul */
+  position: fixed;         /* Fixa a navbar no topo */
+  top: 0;                  /* Alinha ao topo */
+  left: 0;                 /* Alinha à esquerda */
+  width: 100%;             /* Ocupa toda a largura da tela */
+  padding: 0;              /* Remove o padding */
+  z-index: 1000;           /* Garante que a navbar fique sobre outros elementos */
+}
+
+/* Container da navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;  /* Espaço entre os itens */
+  align-items: center;            /* Alinha os itens no centro */
+  max-width: 1200px;
+  margin: 0 auto;                 /* Centraliza o conteúdo */
+  padding: 5px 15px;              /* Espaçamento interno (vertical e lateral) reduzido */
+}
+
+/* Logo da navbar */
+.navbar-logo {
+  color: white;            /* Cor do texto */
+  font-size: 20px;         /* Tamanho da fonte reduzido */
+  font-weight: bold;       /* Deixa o texto em negrito */
+  text-decoration: none;   /* Remove o sublinhado */
+}
+
+/* Menu da navbar */
+.navbar-menu {
+  list-style: none;        /* Remove os marcadores da lista */
+  display: flex;           /* Exibe os itens em linha */
+  padding: 0;              /* Remove o padding padrão */
+  margin: 0;               /* Remove a margem */
+}
+
+/* Itens do menu */
+.navbar-item {
+  color: white;            /* Cor do texto */
+  margin-left: 15px;       /* Espaçamento entre os itens */
+  text-decoration: none;   /* Remove o sublinhado */
+  font-size: 16px;         /* Tamanho da fonte reduzido */
+}
+
+.navbar-item:hover {
+  text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+}

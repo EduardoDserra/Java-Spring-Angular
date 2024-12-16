@@ -3,6 +3,7 @@ package br.com.java_angular.spring_angular.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import br.com.java_angular.spring_angular.Exception.ResourceNotFoundException;
 import br.com.java_angular.spring_angular.Model.Categoria;
 import br.com.java_angular.spring_angular.Service.CategoriaService;
 
@@ -24,7 +25,12 @@ public class CategoriaController {
     // Endpoint para buscar uma categoria por ID
     @GetMapping("/{id}")
     public Categoria buscarCategoriaPorId(@PathVariable Long id) {
-        return categoriaService.buscarPorId(id);
+        Categoria categoria = categoriaService.buscarPorId(id);
+        if (categoria == null) {
+            // Lançando a exceção personalizada caso a categoria não seja encontrada
+            throw new ResourceNotFoundException("Categoria não encontrada com ID: " + id);
+        }
+        return categoria;
     }
 
     // Endpoint para salvar ou atualizar uma categoria
